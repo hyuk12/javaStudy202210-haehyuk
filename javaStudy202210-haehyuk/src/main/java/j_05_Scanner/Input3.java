@@ -29,6 +29,7 @@ public class Input3 {
         sc.nextLine();
 
         System.out.print("주소: ");
+//        sc.next();
         address = sc.nextLine();
 
         System.out.print("연락처: ");
