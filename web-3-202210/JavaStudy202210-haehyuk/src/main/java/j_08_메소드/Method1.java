@@ -25,7 +25,7 @@ public class Method1 {
         System.out.println("수업과목: " + str);
     }
 
-
+    //2. [x | o]
     public static String call3(){
         String result = "";
         for(int i = 0; i < 5; i++){
@@ -36,6 +36,11 @@ public class Method1 {
         }
         return result;
     }
+    //2. [o | o]
+    public static String call4(int year, int month , int day){
+        System.out.println("[o | o]");
+        return year + "년 " + month + "월 " + day + "일";
+    }
 
     // Main 메소드
     public static void main(String[] args) {
@@ -43,6 +48,8 @@ public class Method1 {
         call2("Java");
         String star1 = call3();
         System.out.println(star1);
+        String todayDate = call4(2022,10,24);
+        System.out.println(todayDate);
     }
 
 }
