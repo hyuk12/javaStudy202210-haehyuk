@@ -4,6 +4,11 @@ package j11_배열.StudentManagement;
 public class Student {
 
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
     private int kor;
     private int eng;
     private int math;
@@ -18,6 +23,14 @@ public class Student {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+
+        calculation();
+    }
+
+    public void updateStudent(Student upstudent){
+        this.kor = upstudent.kor;
+        this.eng = upstudent.eng;
+        this.math = upstudent.math;
 
         calculation();
     }
@@ -57,7 +70,9 @@ public class Student {
         System.out.println("총점: " + totalScore);
         System.out.println("평균: " + avgScore);
         System.out.println("학점: " + grade);
+        System.out.println();
     }
+
 
 
 }
