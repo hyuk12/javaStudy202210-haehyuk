@@ -65,10 +65,43 @@ public class StudentSet  {
         System.out.println(students);
 
         // 4 set을 list로 변환하고 id값 순서대로 넣기
-        searchId = 20220001;
+
         students.add(new Student(20220001, "김준일"));
 
+        // set을 list에 담기
+        List<Student> studentList = new ArrayList<>();
+        studentList.addAll(students);
 
+        // 리스트에 담긴 값을 새로운 정렬 하는 리스트 생성후
+        // 순서대로 담아 두고 본래 있던 list 클리어후 리스트 추가
+        List<Student> studentsList = new ArrayList<>();
+
+
+        System.out.println(studentList.size());
+        searchId = 20220001;
+        for (int i = 0; i < studentList.size() ; i++) {
+            for (Student student : studentList) {
+
+                if (student.getId() == searchId + i) {
+
+                    studentsList.add(student);
+                    break;
+                }
+            }
+        }
+        studentList.clear();
+        studentList.addAll(studentsList);
+//        searchId = 20220001;
+//        for (int i = 0; i < studentList.size() ; i++) {
+//            for (Student student : studentList) {
+//                if (student.getId() == searchId + i) {
+//                    studentList.set(i,student);
+//                    break;
+//                }
+//            }
+//        }
+
+        System.out.println(studentList);
 
     }
 }
