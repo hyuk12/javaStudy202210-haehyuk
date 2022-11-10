@@ -36,7 +36,7 @@ public class StudentSet  {
         while (iterator.hasNext()) {
             Student student = iterator.next();
             if (student.getName().equals(searchName)) {
-                System.out.println("김혜진 학생의 학번은: " + student.getId());
+                System.out.println(searchName + "학생의 학번은: " + student.getId());
                 break;
             }
         }
@@ -53,11 +53,10 @@ public class StudentSet  {
 
         // 3번 문제
         searchId = 20220001;
-        Set<Student> removeStudent = new HashSet<>();
+
         for (Student student : students) {
             if (student.getId() == searchId) {
-                removeStudent.add(student);
-                students.removeAll(removeStudent);
+                students.remove(student);
                 break;
             }
         }
@@ -68,38 +67,21 @@ public class StudentSet  {
 
         students.add(new Student(20220001, "김준일"));
 
-        // set을 list에 담기
+
         List<Student> studentList = new ArrayList<>();
-        studentList.addAll(students);
-
-        // 리스트에 담긴 값을 새로운 정렬 하는 리스트 생성후
-        // 순서대로 담아 두고 본래 있던 list 클리어후 리스트 추가
-        List<Student> studentsList = new ArrayList<>();
 
 
-        System.out.println(studentList.size());
-        searchId = 20220001;
-        for (int i = 0; i < studentList.size() ; i++) {
-            for (Student student : studentList) {
 
-                if (student.getId() == searchId + i) {
+        searchId = 20220000;
 
-                    studentsList.add(student);
-                    break;
+        for (int i = 0; i < students.size() ; i++) {
+            searchId++;
+            for (Student student : students) {
+                if (student.getId() == searchId) {
+                    studentList.add(student);
                 }
             }
         }
-        studentList.clear();
-        studentList.addAll(studentsList);
-//        searchId = 20220001;
-//        for (int i = 0; i < studentList.size() ; i++) {
-//            for (Student student : studentList) {
-//                if (student.getId() == searchId + i) {
-//                    studentList.set(i,student);
-//                    break;
-//                }
-//            }
-//        }
 
         System.out.println(studentList);
 
