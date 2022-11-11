@@ -22,5 +22,7 @@ public class JSON1 {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(jsonObject);
         System.out.println(json);
+
+        System.out.println();
     }
 }
