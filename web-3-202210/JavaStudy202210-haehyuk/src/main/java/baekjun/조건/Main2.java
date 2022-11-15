@@ -12,29 +12,35 @@ public class Main2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int f = sc.nextInt();
-        int s = sc.nextInt();
-        int t = sc.nextInt();
+        int a, b, c;
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
 
-        int price;
-        if(f == s && s == t){
-            price = 10000 + f * 1000; 
-        } else if (f == s) {
-            price = 1000 + f * 100;
-        } else if (s == t){
-            price = 100 + s * 100;
-        }else if (t == f){
-            price = 10 + t * 100;
+        if (a != b && b != c && c != a){
+            int max;
+            //c > a > b
+            if (a > b){
+                // a (b,c)
+                max = Math.max(c, a);
+            }else{
+                //c >  b  > a
+                max = Math.max(c, b);
+            }
+            System.out.println(max * 100);
         }else{
-            if(f > s && f > t){
-                price = f * 100;
-            } else if (s > f && s > t) {
-                price = s * 100;
-            } else{
-                price = t * 100;
+            if ( a == b && a == c){
+                System.out.println(a * 1000 + 10000);
+            }else {
+                if (a == b || a == c){
+                    System.out.println(1000 + a * 100);
+                }else {
+                    System.out.println(1000 + b * 100);
+                }
             }
         }
-        System.out.println(price);
+
+
         sc.close();
     }
 }
