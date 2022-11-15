@@ -19,14 +19,10 @@ public class CollectionForEach {
             System.out.println(name);
         }
 
-        list.forEach((name) -> {
-            System.out.println(name);
-        });
+        list.forEach(System.out::println);
 
         // 밑의 로직을 한번에 정리 한 것이 위의 코드이다.
-        Consumer<String> consumer = name -> {
-            System.out.println(name);
-        };
+        Consumer<String> consumer = System.out::println;
         for (String name :  Objects.requireNonNull(list)) {
             consumer.accept(name);
         }
@@ -38,9 +34,7 @@ public class CollectionForEach {
 
         AtomicInteger result = new AtomicInteger();
 
-        numbers.forEach(num ->{
-            result.addAndGet(num);
-        });
+        numbers.forEach(result::addAndGet);
         System.out.println(result.get());
 
         Map<Integer, String> students = new TreeMap<>();
