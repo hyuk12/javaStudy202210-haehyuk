@@ -2,6 +2,10 @@ package 프로그래머스;
 
 import java.util.Arrays;
 
+/**
+ *  과일 장수 문제.
+ */
+
 class Apple {
 
     public int Apple(int k, int m, int[] score) {
