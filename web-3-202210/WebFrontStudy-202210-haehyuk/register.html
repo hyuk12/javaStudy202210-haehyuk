@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+
+    <form action="#" method="get">
+        <div>
+            <label for="input-username">아이디: </label>
+            <input type="text" id="input-username" name="username" placeholder="아이디를 입력하세요." required>
+        </div>
+        <div>
+            <label for="input-password">비밀번호: </label>
+            <input type="password" id="input-password" name="password" placeholder="비밀번호를 입력하세요." required>
+        </div>
+        <div>
+            <label for="input-phone">전화번호: </label>
+            <input type="tel" id="input-phone" name="phone" placeholder="전화번호를 입력하세요." required>
+        </div>
+        <div>
+            <label for="input-email">이메일: </label>
+            <input type="email" id="input-email" name="username" placeholder="이메일을 입력하세요." required>
+        </div>
+        <div>
+            <input type="radio" id="student-year1" name="student-year" value="1"><label for="student-year1">1학년</label>
+            <input type="radio" id="student-year2" name="student-year" value="2"><label for="student-year2">2학년</label>
+            <input type="radio" id="student-year3" name="student-year" value="3"><label for="student-year3">3학년</label>
+            <input type="radio" id="student-year4" name="student-year" value="4"><label for="student-year4">4학년</label>
+            <input type="radio" id="student-year5" name="student-year" value="5"><label for="student-year5">5학년</label>
+        </div>
+        <div>
+            <input type="checkbox" id="hobby1" name="hobby" value="축구"><label for="hobby1">축구</label>
+            <input type="checkbox" id="hobby2" name="hobby" value="농구"><label for="hobby2">농구</label>
+            <input type="checkbox" id="hobby3" name="hobby" value="골프"><label for="hobby3">골프</label>
+        </div>
+        <div>
+            <label for="address">지역</label>
+            <select name="address" id="address">
+                <option value="부산">부산</option>
+                <option value="서울">서울</option>
+                <option value="울산">울산</option>
+            </select>
+        </div>
+        <div>
+            <label for="job">직업</label>
+            <input type="text" list="job-datalist" id="job" name="job">
+            <datalist id="job-datalist">
+                <option value="강사">강사</option>
+                <option value="학생">학생</option>
+                <option value="개발자">개발자</option>
+                <option value="기타">기타</option>
+            </datalist>
+        </div>
+        <label for="introduce">자기소개</label>
+        <div>
+            <textarea name="introduce" id="introduce" cols="30" rows="10" placeholder="자기소개를 입력하세요"></textarea>
+        </div>
+        <div>
+            <button type="submit">회원가입</button>
+            <button type="reset">다시입력</button>
+        </div>
+    </form>
+</body>
+</html>
