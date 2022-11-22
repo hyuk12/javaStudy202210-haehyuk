@@ -49,6 +49,7 @@ header {
 }
 
 .menu > li {
+    
     padding: 12px 9px;
 }
 
@@ -61,6 +62,7 @@ header {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    
 }
 
 .tab-selected {
