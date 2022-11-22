@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오맵</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=82ed160bdd0acf8db3e6729715ae1915&libraries=servises,clusterer,drawing"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/kakaomap/images/favicon.png">
     <link rel="stylesheet" href="/kakaomap/css/kakaomap.css">
     <link rel="stylesheet" href="/kakaomap/css/map.css">
@@ -16,7 +17,20 @@
     <div id="container">
         <aside>
             <header>
-
+                <div class="title">
+                    <h1 class="title-text">
+                        <i class="fa-solid fa-bars"></i>
+                        kakao<sapn class="map-text">map</sapn>
+                    </h1>
+                    <div class="check-location">
+                        <input type="checkbox" id="my-location">
+                        <label for="my-location" class="my-location-label">현 지도 내 장소검색</label>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" class="search-input" placeholder="장소, 주소, 버스 검색">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </header>
             <ul class="menu">
                 <li><a href="#" class="mainmenutab tab-selected">검색</a></li>
@@ -25,8 +39,80 @@
                 <li><a href="#" class="mainmenutab ">지하철</a></li>
                 <li><a href="#" class="mainmenutab ">MY</a></li>
             </ul>
+            <div class="report-error">
+                <span class="address">부산광역시 진구</span>
+                <div class="weather">
+                    <span class="air">흐리고 비</span>
+                    <span class="temper">14º</span>
+                    <span class="change-temper">어제보다 2ºC 높아요</span>
+                    <span class="bar"></span>
+                    <span class="dust">미세<span class="dust-condition1">좋음</span> </span>
+                    <span class="dust2">초미세</span><span class="dust-condition2">보통</span>
+                </div>
+                <a href="#" class="reportbug">오류신고</a>
+            </div>
+            <div class="info">
+                <h3 class="title-around">주변 탐색</h3>
+                <ul class="list-around">
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">카페</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">버스</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">지하철</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">숙박</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">은행</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="button-title">편의점</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </aside>
-        
         <div id="map"></div>
     </div>
     
@@ -35,6 +121,7 @@
     
     
 	<script>
+        
 		var container = document.getElementById('map');
 		var options = {
 			center: new kakao.maps.LatLng(33.450701, 126.570667),
@@ -62,6 +149,7 @@
         var zoomControl = new kakao.maps.ZoomControl();
         map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
+        // 버튼 이벤트 클릭 
         var tab = document.querySelectorAll('.mainmenutab');
         function clickMenuHandler() {
             for(var i = 0; i < tab.length; i++){
