@@ -40,7 +40,7 @@
                 <li><a href="#" class="mainmenutab ">MY</a></li>
             </ul>
             <div class="report-error">
-                <span class="address">부산광역시 진구</span>
+                <span class="address">부산광역시 양정1동</span>
                 <div class="weather">
                     <span class="air">흐리고 비</span>
                     <span class="temper">14º</span>
@@ -112,6 +112,8 @@
                     </li>
                 </ul>
             </div>
+            <div class="favorite"></div>
+            <button type="button" class="toggle-button">◀</button>
         </aside>
         <div id="map"></div>
     </div>
@@ -142,15 +144,15 @@
         map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
         // 버튼 이벤트 클릭 
-        var tab = document.querySelectorAll('.mainmenutab');
+        const tab = document.querySelectorAll('.mainmenutab');
         function clickMenuHandler() {
-            for(var i = 0; i < tab.length; i++){
+            for(let i = 0; i < tab.length; i++){
                 tab[i].classList.remove('tab-selected');
             }
             this.classList.add('tab-selected');
         }
         
-        for(var i = 0; i < tab.length; i++){
+        for(let i = 0; i < tab.length; i++){
             tab[i].addEventListener('click', clickMenuHandler);
         }
        

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 * {
     font-family: 'Nanum Gothic', sans-serif;
     box-sizing: border-box;
@@ -211,6 +213,10 @@ header {
     font-weight: bold;
 }
 
+.address:hover {
+    text-decoration: underline;
+}
+
 .weather {
     float: left;
     padding-top: 4px;
@@ -284,6 +290,11 @@ header {
 
     text-decoration: none;
 }
+
+.reportbug:hover {
+    text-decoration: underline;
+}
+
 .info {
     border-bottom: 1px solid #eee;
     padding: 23px 0px 19px 19px;
@@ -337,6 +348,10 @@ header {
     overflow: hidden;
 }
 
+.button-icon:hover {
+    background-color: #f0f0f0;
+}
+
 .button-icon > i {
     color: #555;
 }
@@ -344,6 +359,35 @@ header {
 .button-title {
     font-size: 10px;
     color: #a0a0a0;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    
+    width: 18px;
+    height: 50px;
+    
+    background-color: white;
+    
+    box-shadow: 2px 0px 2px rgba(0,0,0,0.2);
+    font-size: 10px;
+    color: #258fff;
+    
+    line-height: 0px;
+    transform: translateY(-50%);
+    
+    cursor: pointer;
 }
 
 #map {
