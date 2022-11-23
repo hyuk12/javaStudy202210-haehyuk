@@ -319,6 +319,7 @@ header {
     height: 48px;
     
     background-color: #ffffff00;
+    cursor: pointer;
 }
 
 .button-icon {
