@@ -106,7 +106,7 @@ header {
 
 #my-location:checked + .my-location-label::before {
     display: inline-block;
-    content: "√";
+    content: "∨";
     
     margin-right: 5px;
     border-radius: 10px;
