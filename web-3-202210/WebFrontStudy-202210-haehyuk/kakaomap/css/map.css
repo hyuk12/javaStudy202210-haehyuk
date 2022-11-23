@@ -116,7 +116,7 @@ header {
     line-height: 10px;
     color: #258fff;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: bold;
     background-color: white;
 }
 
@@ -285,7 +285,7 @@ header {
     text-decoration: none;
 }
 .info {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #eee;
     padding: 23px 0px 19px 19px;
     height: 120.5px;
 }
