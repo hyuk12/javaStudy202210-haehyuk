@@ -456,6 +456,39 @@ header {
     cursor: pointer;
 }
 
+.route-searchbox {
+    padding: 20px 0px 0px;
+    width: 390px;
+    height: 93px;
+}
+.way-point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 48px; */
+    width: 100%;
+    height: 37px;
+
+}
+
+.start-input {
+    margin: 0px 12px;
+    padding: 0px;
+
+    border: 1px solid #eee;
+    width: 268px;
+    height: 35px;
+}
+
+.end-input {
+    margin: 0px 48px 0px 12px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 35px;
+}
+
 #map {
     width: 100%;
     height: 100%;
