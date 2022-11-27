@@ -471,22 +471,98 @@ header {
 
 }
 
+.start {
+    color: red;
+    font-size: 10px;
+}
+
 .start-input {
     margin: 0px 12px;
-    padding: 0px;
-
+    padding: 0px 48px 0px 12px;
     border: 1px solid #eee;
-    width: 268px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 294px;
     height: 35px;
 }
 
+.updown-button {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+
+    color: #333;
+}
+
+
+.way-point2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: -2px;
+    width: 100%;
+    height: 37px;
+
+}
+
+.way-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 14px 0px 10px;
+    padding-left: 12px;
+    border: 1px solid #eee;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    width: 294px;
+    height: 37px;
+}
+
 .end-input {
-    margin: 0px 48px 0px 12px;
+    
+    margin: 0px 48px 0px 0px;
     padding: 0px;
     border: none;
-    outline: none;
-    width: 80%;
+    width: 100%;
     height: 35px;
+}
+
+.way-input > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: #333;
+
+    padding-right: 20px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.way-input > a > i {
+    font-size: 24px;
+}
+
+.x-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+
+    width: 36px;
+    height: 36px;
+
 }
 
 #map {
