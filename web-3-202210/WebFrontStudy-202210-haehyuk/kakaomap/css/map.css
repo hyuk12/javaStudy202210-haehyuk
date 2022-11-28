@@ -461,6 +461,11 @@ header {
     width: 390px;
     height: 93px;
 }
+
+.drag-area {
+    width: 10px;
+    height: 10px;
+}
 .way-point {
     display: flex;
     justify-content: center;
@@ -472,8 +477,8 @@ header {
 }
 
 .start {
-    color: red;
-    font-size: 10px;
+    color: blue;
+    /* font-size: 10px; */
 }
 
 .start-input {
@@ -482,6 +487,7 @@ header {
     border: 1px solid #eee;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    outline: none;
     width: 294px;
     height: 35px;
 }
@@ -509,13 +515,17 @@ header {
 
 }
 
+.end {
+    color: red;
+}
+
 .way-input {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: 0px 14px 0px 10px;
-    padding-left: 12px;
+    margin: 0px 14px 0px 13px;
+    padding-left: 10px;
     border: 1px solid #eee;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -529,6 +539,7 @@ header {
     margin: 0px 48px 0px 0px;
     padding: 0px;
     border: none;
+    outline: none;
     width: 100%;
     height: 35px;
 }
