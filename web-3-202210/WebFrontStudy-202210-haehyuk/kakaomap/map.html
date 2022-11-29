@@ -133,22 +133,34 @@
                     <div class="search-body invisible-body">
                         <div class="route-searchbox">
                             <div class="way-point">
-                                <div class="drag-area">
-                                    <span class="start">◎</span>
-                                </div>
-                                <input type="text" class="start-input" placeholder="출발지를 입력하세요">
+                                    <input type="text" class="start-input" placeholder="출발지를 입력하세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '출발지를 입력하세요'">
+                                    <div class="search-way invisible-way">
+                                        <div class="title-way">
+                                            히스토리가 없습니다.
+                                        </div>
+                                        <ul class="list-way"></ul>
+                                        <div class="favorite-way">
+                                            <button type="button" class="button-wayoff">히스토리 끄기</button>
+                                        </div>
+                                    </div>
                                 <a href="#" class="updown-button">
                                     <i class="fa-solid fa-arrow-up"></i>
                                     <i class="fa-solid fa-arrow-down"></i>
                                 </a>
                             </div>
                             <div class="way-point2">
-                                <div class="drag-area">
-                                    <span class="end">◎</span>
-                                </div>
                                 
                                 <div class="way-input">
-                                    <input type="text" class="end-input" placeholder="도착지를 입력하세요">
+                                    <input type="text" class="end-input" placeholder="도착지를 입력하세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '도착지를 입력하세요'">
+                                    <div class="search-way invisible-way">
+                                        <div class="title-way">
+                                            히스토리가 없습니다.
+                                        </div>
+                                        <ul class="list-way"></ul>
+                                        <div class="favorite-way">
+                                            <button type="button" class="button-wayoff">히스토리 끄기</button>
+                                        </div>
+                                    </div>
                                     <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
                                 <a href="#" class="x-button">X</a>

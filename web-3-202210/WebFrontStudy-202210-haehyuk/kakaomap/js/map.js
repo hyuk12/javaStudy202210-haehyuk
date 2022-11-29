@@ -1,37 +1,37 @@
-var container = document.getElementById('map'); // 지도를 표시할 div 
-var options = { 
-    center: new kakao.maps.LatLng(35.15238019730168, 129.0596479230738), // 지도의 중심좌표
-    level: 3 // 지도의 확대 레벨
-};
+// var container = document.getElementById('map'); // 지도를 표시할 div 
+// var options = { 
+//     center: new kakao.maps.LatLng(35.15238019730168, 129.0596479230738), // 지도의 중심좌표
+//     level: 3 // 지도의 확대 레벨
+// };
 
-var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+// var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
 
-// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
-var mapTypeControl = new kakao.maps.MapTypeControl();
+// // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+// var mapTypeControl = new kakao.maps.MapTypeControl();
 
-// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
-map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+// // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+// // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+// map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
-// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
-var zoomControl = new kakao.maps.ZoomControl();
-map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+// // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+// var zoomControl = new kakao.maps.ZoomControl();
+// map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-// 버튼 이벤트 클릭 
-/*------------------------------------map--------------------------------------*/ 
-// const tab = document.querySelectorAll('.mainmenutab');
-// const searchBody = document.querySelectorAll(".search-body");
-// function clickMenuHandler() {
-//     for(let i = 0; i < tab.length; i++){
-//         tab[i].classList.remove('tab-selected');
-//     }    
-//     this.tab.classList.add('tab-selected');
-// }
+// // 버튼 이벤트 클릭 
+// /*------------------------------------map--------------------------------------*/ 
+// // const tab = document.querySelectorAll('.mainmenutab');
+// // const searchBody = document.querySelectorAll(".search-body");
+// // function clickMenuHandler() {
+// //     for(let i = 0; i < tab.length; i++){
+// //         tab[i].classList.remove('tab-selected');
+// //     }    
+// //     this.tab.classList.add('tab-selected');
+// // }
     
-// for(let i = 0; i < tab.length; i++){
-//     tab[i].addEventListener('click', clickMenuHandler);
+// // for(let i = 0; i < tab.length; i++){
+// //     tab[i].addEventListener('click', clickMenuHandler);
     
-// }
+// // }
 
 class MapService {
     static #instance = null;
@@ -44,6 +44,7 @@ class MapService {
 
     load() {
         this.addSearchInputEvent();
+        this.addWaySearchInputEvent();
         this.addAsideToggleButtonEvent();
         this.addMenuTabEvent();
     }
@@ -54,6 +55,21 @@ class MapService {
         searchInput.onclick = () =>{
             const searchRecent = document.querySelector(".search-recent");
             searchRecent.classList.toggle("invisible-recent");    
+        }
+    }
+
+    addWaySearchInputEvent() {
+        const startInput = document.querySelector(".start-input");
+        const endInput = document.querySelector(".end-input");
+
+        startInput.onclick = () =>{
+            const searchRecent = document.querySelector(".search-way");
+            searchRecent.classList.toggle("invisible-way");    
+        }
+
+        endInput.onclick = () =>{
+            const searchRecent = document.querySelector(".search-way");
+            searchRecent.classList.toggle("invisible-way");    
         }
     }
 
