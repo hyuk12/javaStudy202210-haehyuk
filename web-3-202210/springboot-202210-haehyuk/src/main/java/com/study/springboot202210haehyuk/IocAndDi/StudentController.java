@@ -11,6 +11,12 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @Autowired
+    private Test1 t1;
+
+    @Autowired
+    private Test2 t2;
+
     @ResponseBody
     @GetMapping("/student")
     public String printStudent() {
@@ -18,6 +24,8 @@ public class StudentController {
                 .studentId(2001)
                 .studentName("김경민")
                 .build();
+        t1.print();
+        t2.print();
 
         studentService.printStudentInfo(student);
         return null;
