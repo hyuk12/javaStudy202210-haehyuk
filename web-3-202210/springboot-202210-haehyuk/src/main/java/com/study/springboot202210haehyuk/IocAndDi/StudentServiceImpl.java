@@ -1,8 +1,9 @@
 package com.study.springboot202210haehyuk.IocAndDi;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class StudentServiceImpl implements StudentService{
     @Override
     public void printStudentInfo(Student student) {
