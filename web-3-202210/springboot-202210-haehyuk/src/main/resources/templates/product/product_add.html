@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품등록</title>
+</head>
+<body>
+  <form action="/api/product" method="post">
+    <h1>상품 등록 페이지</h1>
+    <table>
+      <tr>
+        <td>상품코드</td>
+        <td><input type="text" name="productCode"></td>
+      </tr>
+      <tr>
+        <td>상품명</td>
+        <td><input type="text" name="productName"></td>
+      </tr>
+      <tr>
+        <td>가격</td>
+        <td><input type="text" name="price"></td>
+      </tr>
+      <tr>
+        <td>수량</td>
+        <td><input type="text" name="stock"></td>
+      </tr>
+    </table>
+    <button>상품 등록</button>
+  </form>
+</body>
+</html>

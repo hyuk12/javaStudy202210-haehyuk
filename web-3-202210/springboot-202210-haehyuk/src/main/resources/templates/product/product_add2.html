@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품등록</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <h1>상품 등록 페이지</h1>
+  <table>
+    <tr>
+      <td>상품코드</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>상품명</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>가격</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>수량</td>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+  <button type="button">상품 등록</button>
+  <script>
+    const addButton = document.querySelector("button");
+
+    addButton.onclick = () => {
+      const inputs = document.querySelectorAll("input");
+
+      let product = {
+        productCode : inputs[0].value,
+        productName : inputs[1].value,
+        price : inputs[2].value,
+        stock : inputs[3].value
+      };
+
+      $.ajax({
+        async: false,
+        type: "POST",
+        url: "/api/product/2",
+        contentType: "application/json",
+        data: JSON.stringify(product),
+        dataType: "text",
+        success: response => {
+          alert(response);
+        },
+        error: response => {
+          alert(response);
+        }
+      });
+    };
+  </script>
+</body>
+</html>

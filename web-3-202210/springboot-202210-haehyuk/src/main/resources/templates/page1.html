@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>page1</title>
 </head>
 <body>
   <h1>page1입니다.</h1>
-  <a href="page2.html">page2</a>
+  <h1 th:text="${key}"></h1>
 </body>
 </html>
