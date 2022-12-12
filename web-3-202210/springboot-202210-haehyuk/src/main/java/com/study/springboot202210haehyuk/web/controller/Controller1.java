@@ -14,6 +14,8 @@ public class Controller1 {
         mv.addObject("key", "value");
         return mv;
 
+        // 테스트
+
     }
 
     @GetMapping("/page2")
