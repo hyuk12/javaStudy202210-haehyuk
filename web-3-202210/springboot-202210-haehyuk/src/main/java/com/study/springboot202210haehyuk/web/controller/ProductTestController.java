@@ -19,6 +19,7 @@ public class ProductTestController {
 //    public String registerProduct(HttpServletRequest request) {
 //        System.out.println(request.getParameter("price"));
 //        return "product/product_view";
+//        test
 //    }
 
     @PostMapping("/api/product")
